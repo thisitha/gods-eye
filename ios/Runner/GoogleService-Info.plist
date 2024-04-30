@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>57281647344-nnf5mgs972ooekqauonai3bnj0p9f3id.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.57281647344-nnf5mgs972ooekqauonai3bnj0p9f3id</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>57281647344-a1aeg4e9obe6a3e5psb9g56vj1ahtb73.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCzhpF8Tu7shmwF61ERvzhHT7LLiLf0iRM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>57281647344</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gods.eye.godsEye</string>
+	<key>PROJECT_ID</key>
+	<string>gods-eye-1df04</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gods-eye-1df04.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:57281647344:ios:d2732773f9ec7ee48d6835</string>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "57281647344",
+    "project_id": "gods-eye-1df04",
+    "storage_bucket": "gods-eye-1df04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57281647344:android:91d1d7d9f61a6f6b8d6835",
+        "android_client_info": {
+          "package_name": "com.gods.eye.gods_eye"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuLWIz5Z-4Uxf6ftsQk90QNDy1Igbaw5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
