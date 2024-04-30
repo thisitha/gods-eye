@@ -603,79 +603,93 @@ class _personalInformationState extends State<personalInformation> {
           SizedBox(
             height: 5.w,
           ),
-          Container(
-            decoration: BoxDecoration(
-                color: Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(20.sp)),
-            width: 90.w,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: 3.w, left: 3.w),
-                  child: Text(
-                    "Date of Birth",
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w700, fontSize: 12.sp),
+          GestureDetector(
+            onTap: () async {
+              print("Stuff");
+              DateTime? newDateTime = await showRoundedDatePicker(
+                context: context,
+                // theme: ThemeData.dark(),
+              );
+              DOBController.text = DateFormat.yMMMEd().format(newDateTime!);
+
+              DOB.value = DOBController.text;
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(20.sp)),
+              width: 90.w,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 3.w, left: 3.w),
+                    child: Text(
+                      "Date of Birth",
+                      style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.w700, fontSize: 12.sp),
+                    ),
                   ),
-                ),
-                Padding(
-                    padding: EdgeInsets.only(
-                      left: 3.w,
-                    ),
-                    child: GestureDetector(
-                        onTap: () async {
-                          DateTime? newDateTime = await showRoundedDatePicker(
-                            context: context,
-                            theme: ThemeData.dark(),
-                          );
-                          DOBController.text =
-                              DateFormat.yMMMEd().format(newDateTime!);
+                  Padding(
+                      padding: EdgeInsets.only(
+                        left: 3.w,
+                      ),
+                      child: GestureDetector(
+                          // onTap: () async {
+                          //   print("Stuff");
+                          //   DateTime? newDateTime = await showRoundedDatePicker(
+                          //     context: context,
+                          //     // theme: ThemeData.dark(),
+                          //   );
+                          //   DOBController.text =
+                          //       DateFormat.yMMMEd().format(newDateTime!);
+                          //
+                          //   DOB.value = DOBController.text;
+                          // },
+                          child: Container(
+                              height: 5.h,
+                              width: 90.w,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Spacer(),
+                                  Obx(() => Text(
+                                        DOB.value,
+                                        style: GoogleFonts.montserrat(
+                                          color:
+                                              Color.fromRGBO(179, 179, 179, 1),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 10.sp,
+                                          // letterSpacing: 1.sp
+                                        ),
+                                      )),
+                                  Spacer(),
+                                ],
+                              )))
 
-                          DOB.value = DOBController.text;
-                        },
-                        child: Container(
-                            height: 5.h,
-                            width: 90.w,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Spacer(),
-                                Obx(() => Text(
-                                      DOB.value,
-                                      style: GoogleFonts.montserrat(
-                                        color: Color.fromRGBO(179, 179, 179, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 10.sp,
-                                        // letterSpacing: 1.sp
-                                      ),
-                                    )),
-                                Spacer(),
-                              ],
-                            )))
-
-                    // TextField(
-                    //   controller: DOBController,
-                    //   //  controller: usernameController,
-                    //   decoration: InputDecoration(
-                    //     border: InputBorder.none,
-                    //     hintText: "DD/MM/YYYY",
-                    //     hintStyle: GoogleFonts.montserrat(
-                    //       color: Color.fromRGBO(179, 179, 179, 1),
-                    //       fontWeight: FontWeight.w600,
-                    //       fontSize: 10.sp,
-                    //       // letterSpacing: 1.sp
-                    //     ),
-                    //   ),
-                    //   style: GoogleFonts.montserrat(
-                    //     color: Color.fromRGBO(179, 179, 179, 1),
-                    //     fontWeight: FontWeight.w600,
-                    //     fontSize: 10.sp,
-                    //     // letterSpacing: 1.sp
-                    //   ),
-                    // ),
-                    ),
-              ],
+                      // TextField(
+                      //   controller: DOBController,
+                      //   //  controller: usernameController,
+                      //   decoration: InputDecoration(
+                      //     border: InputBorder.none,
+                      //     hintText: "DD/MM/YYYY",
+                      //     hintStyle: GoogleFonts.montserrat(
+                      //       color: Color.fromRGBO(179, 179, 179, 1),
+                      //       fontWeight: FontWeight.w600,
+                      //       fontSize: 10.sp,
+                      //       // letterSpacing: 1.sp
+                      //     ),
+                      //   ),
+                      //   style: GoogleFonts.montserrat(
+                      //     color: Color.fromRGBO(179, 179, 179, 1),
+                      //     fontWeight: FontWeight.w600,
+                      //     fontSize: 10.sp,
+                      //     // letterSpacing: 1.sp
+                      //   ),
+                      // ),
+                      ),
+                ],
+              ),
             ),
           ),
           SizedBox(

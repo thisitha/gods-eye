@@ -32,6 +32,7 @@ class _servicesAlertedScreenState extends State<servicesAlertedScreen> {
       fetchEmergencyContactAndFillEmergencyContacts();
     });
     saveAccidentLogWithLocation();
+
     // setState(() {});
 
     super.initState();
@@ -275,16 +276,6 @@ Future<Map<String, dynamic>> getUserData() async {
         .addAll(insuranceDataSnapshot.data() as Map<String, dynamic>);
   }
   print(consolidatedUserData);
-
-  // SmsStatus result = await BackgroundSms.sendMessage(
-  //     phoneNumber: emergencyDataSnapshot["mobileNumber"],
-  //     message: "Test mesage");
-
-  // if (result == SmsStatus.sent) {
-  //   print("Sent");
-  // } else {
-  //   print("Failed");
-  // }
 
   return consolidatedUserData;
 }
